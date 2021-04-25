@@ -1,5 +1,5 @@
 class Article < ApplicationRecord
-  has_many :comments
+  has_many :real_comments, :class_name => 'Comment' 
   def self.has_no_author
     where(author: nil)
   end
