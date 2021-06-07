@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
 
   def edit
     @article.title = params[:title]
-    @article.update(author: params[:author])
+    @article.author = params[:author]
     @article.updated_at = Time.now
     @article.save
   end
