@@ -3,7 +3,10 @@
 <ul>
   <% @articles.each do |article| %>
     <li>
-      <%= article.title %>
+      Title: <%= article.title %>
+      Author: <%= article.author %>
+      Created_at: <%= article.created_at %>
+      Updated_at: <%= article.updated_at %>
     </li>
   <% end %>
 </ul>
