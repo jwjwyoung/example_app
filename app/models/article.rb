@@ -4,7 +4,6 @@ class Article < ApplicationRecord
   valiates_uniqueness_of :id
   
   def self.has_no_author
-    where(is_deleted: false).
     where(author: nil)
   end
 end
