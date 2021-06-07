@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
-    @articles = @articles.where("author = ?", params[:author])
+    @articles = @articles.where(author: params[:author])
   end
 
   def show
