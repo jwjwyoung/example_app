@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
-    @articles = @articles.where(author: params[:author])
+    @articles = @articles.where(author: param_author)
   end
 
   def show
@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
 
   def edit
     @article.title = params[:title]
-    @article.author = params[:author]
+    @article.author = param_author
     @article.updated_at = Time.now
     @article.save
   end
